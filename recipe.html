@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta content="charset=utf-8">
+<title>Week3Day1 Group Challenge</title>
+<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <div id='lunch'>
+        <h2>Lunch Recipe</h2>
+        <ol>
+            <li>prepare burger patty</li>
+            <li>Grill patty on medium heat</li>
+            <li>Toast bun while Grilling meat</li>
+            <li>Prepare toppings</li>
+            <li>Assemble ingredients into hamburger when done</li>
+        </ol>
+    </div>
+
+    <div id="dinner">
+        <h2>Dinner Recipe</h2>
+        <ol>
+            <li>Cut veggies</li>
+            <li>Saute veggies in pan</li>
+            <li>Add shrimp to veggies and cook until pink</li>
+            <li>Season with salt and pepper</li>
+            <li>Serve with a side of rice</li>
+        </ol>	
+	</div>
+
+    <script>
+        var d = new Date(); //Get current date
+        var hr = d.getHours() - 10; //Get current hours 
+        document.write(d + ' ' + hr);
+        if (hr <= 12){
+            document.getElementById("lunch").style.display = "block";
+        } 
+        else if (hr <= 19 ){
+            document.getElementById("dinner").style.display = "block";
+        }
+        else{
+            document.write('<br><br> You are too late for dinner or lunch');
+        }
+    </script>
+</body>
+</html>
